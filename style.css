@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body
+{
+    font-family: "Roboto",sans-serif ;
+    background-color: rgba(0,0,0,0.2) ;
+
 }
 ul {
   list-style: none;
@@ -12,18 +23,45 @@ img {
   width: 20px;
 }
 
+textarea
+{
+    padding: 0.4rem;
+    outline: none;
+}
+
+.search
+{
+    background-color: #e3daf0;
+    border: none;
+    border-radius: 3px;
+    outline: transparent;
+    padding: 0.3rem;
+}
+.search::placeholder
+{
+    font-size: 0.7rem;
+    color: rgb(142, 137, 137);
+    padding-left: 0.3rem;
+}
+
+.sticky-box:hover
+{
+    box-shadow: 0 0 20px 5px rgb(161, 51, 51);
+}
+
 .navbar {
+    color:white;
   padding: 0.7rem 2rem;
   margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: aqua;
+  background-color: #24252a;
   box-shadow: 0 0 5px 0px rgb(66, 64, 64);
 }
 .nav-items {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .container {
@@ -32,10 +70,12 @@ img {
 
 .sticky-box {
   height: auto;
-  width: 18%;
-  background-color: blue;
+  width: 250px;
+  /* background-color: blue;00 */
+  background-color: #24252a;
   padding: 8px;
   border-radius: 10px;
+  color: white;
 }
 
 .sticky-box-nav {
@@ -43,9 +83,38 @@ img {
   justify-content: space-between;
   padding: 0.3rem;
   align-items: center;
+  
 }
+
+.sticky-box-nav .bold
+{
+    border: solid white 1px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.bold:hover{
+    transform: scale(1.1);
+}
+
+
 .text-area {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (width<500px)
+{
+    .search
+    {
+        width: 100px;
+        height: 20px;
+    }
+    .navbar
+    {
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
+
 }
