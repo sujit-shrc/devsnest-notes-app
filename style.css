@@ -12,44 +12,40 @@ img {
   width: 20px;
 }
 
-main
-{
-    margin: 1px;
-}
-
-.navbar
-{
-    padding: 1rem 0rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: aqua;
-    padding: 0.5rem;
+.navbar {
+  padding: 0.7rem 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aqua;
+  box-shadow: 0 0 5px 0px rgb(66, 64, 64);
 }
 .nav-items {
   display: flex;
   gap: 2rem;
 }
 
-.sticky-box
-{
-    /* display: block; */
-    height: auto;
-    width: 18%;
-    background-color: blue;
-    padding: 8px;
+.container {
+  padding: 0 2rem;
 }
 
-.sticky-box-nav
-{
-    display: flex;
-    justify-content: space-between;
-    padding: 0.3rem;
-    align-items: center;
+.sticky-box {
+  height: auto;
+  width: 18%;
+  background-color: blue;
+  padding: 8px;
+  border-radius: 10px;
 }
-.text-area
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.sticky-box-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+  align-items: center;
+}
+.text-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
