@@ -96,6 +96,7 @@ textarea {
   justify-items: center;
 }
 
+
 .sticky-box {
   height: auto;
   width: 260px;
@@ -182,9 +183,34 @@ textarea::-webkit-scrollbar-thumb {
   background-color: grey;
 }
 
+.menu
+{
+    display: none;
+}
+
 @media (width<500px) {
   .search {
     width: 100px;
     height: 20px;
+  }
+
+  .menu{
+    display: block;
+  }
+
+  .nav-items
+  {
+    display:none;
+  } 
+  .mobile
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+    background-color: red;
   }
 }
