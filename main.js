@@ -2,25 +2,28 @@
 
 document.addEventListener("click", (e) => {
   let navEle = e.target.closest(".sticky-box-nav-item");
-  navEle.classList.toggle("click-show");
-  if (navEle.classList.contains("copy")) {
-    // const textContent = document.getElementById("text");
-    const textContent =
-      navEle.parentElement.parentElement.lastElementChild.firstElementChild;
-    console.log(textContent);
-    textContent.select();
-    textContent.setSelectionRange(0, 99);
-    document.execCommand("copy");
+  if (navEle) {
+    navEle.classList.toggle("click-show");
+    if (navEle.classList.contains("copy")) {
+      const textContent =
+        navEle.parentElement.parentElement.lastElementChild.firstElementChild;
+      console.log(textContent);
+      textContent.select();
+      textContent.setSelectionRange(0, 99);
+      document.execCommand("copy");
+    }
   }
 });
 
 document.addEventListener("input", (e) => {
-  const navEle = e.target.closest(".sticky-box-nav-item");
-  if (navEle.classList.contains("color")) {
-    const colorValue = e.target.value;
-    // console.log(colorValue);
-    document.getElementById("text").style.background = colorValue;
-    document.getElementById("title").style.background = colorValue;
+  const navEle = e.target.closest(".color");
+  if (navEle) {
+    if (navEle.classList.contains("color")) {
+      const colorValue = navEle.value;
+      console.log(colorValue);
+      document.getElementById("text").style.background = colorValue;
+      document.getElementById("title").style.background = colorValue;
+    }
   }
 });
 
