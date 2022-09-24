@@ -25,45 +25,40 @@ textarea {
   resize: none;
 }
 
-.logo-create
-{
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
+.logo-create {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
-.create-note
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border: 1px solid white;
-    border-radius: 50px;
-   transition: 0.2s ease-in-out;
+.create-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50px;
+  transition: 0.2s ease-in-out;
 }
-.create-note:hover
-{
-    cursor: pointer;
-    box-shadow: 0 0 10px 5px grey;
+.create-note:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 5px grey;
 }
 
-#picker
-{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border:none;
-    cursor: pointer;
+#picker {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
 }
-#picker::-webkit-color-swatch
-{
-    border-radius: 50%;
+#picker::-webkit-color-swatch {
+  border-radius: 50%;
 }
 .search {
   background-color: #e3daf0;
@@ -97,6 +92,7 @@ textarea {
   padding: 0 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center;
   justify-items: center;
 }
 
