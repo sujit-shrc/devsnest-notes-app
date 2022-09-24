@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,11 +6,9 @@
   padding: 0;
 }
 
-body
-{
-    font-family: "Roboto",sans-serif ;
-    background-color: rgba(0,0,0,0.2) ;
-
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 ul {
   list-style: none;
@@ -23,34 +19,26 @@ img {
   width: 20px;
 }
 
-textarea
-{
-    padding: 0.4rem;
-    outline: none;
+textarea {
+  padding: 0.4rem;
+  outline: none;
 }
 
-.search
-{
-    background-color: #e3daf0;
-    border: none;
-    border-radius: 3px;
-    outline: transparent;
-    padding: 0.3rem;
+.search {
+  background-color: #e3daf0;
+  border: none;
+  border-radius: 3px;
+  outline: transparent;
+  padding: 0.3rem;
 }
-.search::placeholder
-{
-    font-size: 0.7rem;
-    color: rgb(142, 137, 137);
-    padding-left: 0.3rem;
-}
-
-.sticky-box:hover
-{
-    box-shadow: 0 0 20px 5px rgb(161, 51, 51);
+.search::placeholder {
+  font-size: 0.7rem;
+  color: rgb(142, 137, 137);
+  padding-left: 0.3rem;
 }
 
 .navbar {
-    color:white;
+  color: white;
   padding: 0.7rem 2rem;
   margin-bottom: 2rem;
   display: flex;
@@ -71,11 +59,15 @@ textarea
 .sticky-box {
   height: auto;
   width: 250px;
-  /* background-color: blue;00 */
   background-color: #24252a;
   padding: 8px;
   border-radius: 10px;
   color: white;
+  transition: 0.5s ease-in;
+}
+
+.sticky-box:hover {
+  box-shadow: 0 0 20px 5px rgb(161, 51, 51);
 }
 
 .sticky-box-nav {
@@ -83,20 +75,17 @@ textarea
   justify-content: space-between;
   padding: 0.3rem;
   align-items: center;
-  
 }
 
-.sticky-box-nav .bold
-{
-    border: solid white 1px;
-    border-radius: 2px;
-    cursor: pointer;
+.sticky-box-nav .bold {
+  border: solid white 1px;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
-.bold:hover{
-    transform: scale(1.1);
+.bold:hover {
+  transform: scale(1.1);
 }
-
 
 .text-area {
   display: flex;
@@ -104,17 +93,9 @@ textarea
   align-items: center;
 }
 
-@media (width<500px)
-{
-    .search
-    {
-        width: 100px;
-        height: 20px;
-    }
-    .navbar
-    {
-        /* justify-content: center; */
-        /* align-items: center; */
-    }
-
+@media (width<500px) {
+  .search {
+    width: 100px;
+    height: 20px;
+  }
 }
