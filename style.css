@@ -1,0 +1,49 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul
+{
+    list-style: none;
+}
+
+img
+{
+    height: 20px;
+    width: 20px;
+}
+
+.navbar
+{
+    margin: 1rem 0rem;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+    padding: 0.5rem;
+}
+.nav-items
+{
+    display: flex;
+    gap: 2rem;
+}
+
+.sticky-box
+{
+    /* display: block; */
+    height: 62px;
+    width: 31%;
+    background-color: blue;
+    padding: 89px;
+}
+
+.sticky-box-nav
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem;
+    align-items: center;
+}
