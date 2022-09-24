@@ -15,11 +15,15 @@ img
     width: 20px;
 }
 
+main
+{
+    margin: 1px;
+}
+
 .navbar
 {
-    margin: 1rem 0rem;
+    padding: 1rem 0rem;
     display: flex;
-
     justify-content: space-between;
     align-items: center;
     background-color: aqua;
@@ -34,10 +38,10 @@ img
 .sticky-box
 {
     /* display: block; */
-    height: 62px;
-    width: 31%;
+    height: auto;
+    width: 18%;
     background-color: blue;
-    padding: 89px;
+    padding: 8px;
 }
 
 .sticky-box-nav
@@ -45,5 +49,11 @@ img
     display: flex;
     justify-content: space-between;
     padding: 0.3rem;
+    align-items: center;
+}
+.text-area
+{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
