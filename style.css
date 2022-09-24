@@ -48,24 +48,22 @@ textarea {
     cursor: pointer;
     box-shadow: 0 0 10px 5px grey;
 }
-img{
-    width: 35px;
-    height: 35px;
-    border-radius: 50px;
-}
+
 #picker
 {
-    position: relative;
-    left: -23px;
-    top:-16px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    background-color: transparent;
     border: none;
-    width: 10px;
-    height: 10px;
+    width: 40px;
+    height: 40px;
+    border:none;
+    cursor: pointer;
+}
+#picker::-webkit-color-swatch
+{
     border-radius: 50%;
-
 }
 .search {
   background-color: #e3daf0;
