@@ -25,45 +25,45 @@ textarea {
   resize: none;
 }
 
-img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50px;
+.logo-create
+{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.create-note
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50px;
+   transition: 0.2s ease-in-out;
+}
+.create-note:hover
+{
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px grey;
 }
 
-.logo-create {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+#picker
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border:none;
+    cursor: pointer;
 }
-.create-note {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border: 1px solid white;
-  border-radius: 50px;
-  transition: 0.2s ease-in-out;
-}
-.create-note:hover {
-  cursor: pointer;
-  box-shadow: 0 0 10px 5px grey;
-}
-#picker {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  outline: none;
-  width: 30px;
-  height: 30px;
-}
-
-.copy > img {
-  width: 20px;
-  height: 20px;
+#picker::-webkit-color-swatch
+{
+    border-radius: 50%;
 }
 .search {
   background-color: #e3daf0;
