@@ -3,7 +3,29 @@
 document.addEventListener("click", (e) => {
   let navEle = e.target.closest(".sticky-box-nav-item");
   navEle.classList.toggle("click-show");
+  if(navEle.classList.contains("copy"))
+  {
+    const textContent = navEle.parent;
+    console.log(textContent)
+    textContent.select()
+    textContent.setSelectionRange(0,99)
+    document.execCommand('copy')
+  }
 });
+
+document.addEventListener("input",(e)=>
+{
+ const navEle = e.target.closest(".sticky-box-nav-item");
+ if(navEle.classList.contains("color"))
+ {
+    const colorValue = e.target.value;
+    // console.log(colorValue);
+    document.getElementById("text").style.background =  colorValue;
+    document.getElementById("title").style.background =  colorValue;
+}
+
+
+})
 
 // =========== create new note ===================
 
@@ -31,3 +53,6 @@ newNote.addEventListener("click", (e) => {
     `;
   container.insertAdjacentHTML("beforeend", createNewNote);
 });
+
+
+
