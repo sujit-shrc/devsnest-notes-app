@@ -25,6 +25,23 @@ textarea {
   resize: none;
 }
 
+.logo-create
+{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.create-note
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50px;
+}
 .search {
   background-color: #e3daf0;
   border: none;
