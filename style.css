@@ -22,6 +22,7 @@ img {
 textarea {
   padding: 0.4rem;
   outline: none;
+  resize: none;
 }
 
 .search {
@@ -54,6 +55,10 @@ textarea {
 
 .container {
   padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .sticky-box {
@@ -64,6 +69,7 @@ textarea {
   border-radius: 10px;
   color: white;
   transition: 0.5s ease-in;
+  margin-bottom: 1.5rem;
 }
 
 .sticky-box:hover {
@@ -78,14 +84,27 @@ textarea {
   cursor: pointer;
 }
 
-.sticky-box-nav .bold {
+.click-show
+{
+    background-color: #e3daf0;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sticky-box-nav-item {
   border: solid white 1px;
   border-radius: 2px;
   transition: 0.3s ease;
 }
 
+
 .sticky-box-nav-item:hover {
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 .sticky-box-nav-item {
