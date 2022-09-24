@@ -73,7 +73,7 @@ textarea {
 .container {
   padding: 0 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   /* justify-content: center;
   align-items: center; */
 }
@@ -101,16 +101,15 @@ textarea {
   cursor: pointer;
 }
 
-.click-show
-{
-    background-color: #e3daf0;
-    color: black;
-    width: 30px;
-    height: 30px;
-    border-radius: 50% !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.click-show {
+  background-color: #e3daf0;
+  color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sticky-box-nav-item {
@@ -118,7 +117,6 @@ textarea {
   border-radius: 2px;
   transition: 0.3s ease;
 }
-
 
 .sticky-box-nav-item:hover {
   transform: scale(1);
@@ -132,6 +130,23 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.title {
+  padding: 0.5rem 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-input {
+  outline: transparent;
+  border: none;
+  padding: 0.3rem;
+}
+
+.title-input::placeholder {
+  padding-left: 0.4rem;
 }
 
 textarea::-webkit-scrollbar {
