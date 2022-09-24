@@ -67,7 +67,7 @@ textarea {
 }
 
 .sticky-box:hover {
-  box-shadow: 0 0 20px 5px rgb(161, 51, 51);
+  box-shadow: 0 0 20px 5px rgb(41, 40, 40);
 }
 
 .sticky-box-nav {
@@ -75,22 +75,41 @@ textarea {
   justify-content: space-between;
   padding: 0.3rem;
   align-items: center;
+  cursor: pointer;
 }
 
 .sticky-box-nav .bold {
   border: solid white 1px;
   border-radius: 2px;
-  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.bold:hover {
+.sticky-box-nav-item:hover {
   transform: scale(1.1);
+}
+
+.sticky-box-nav-item {
+  padding: 0.3rem;
 }
 
 .text-area {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+textarea::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: rgb(32, 26, 26);
+}
+
+textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: grey;
 }
 
 @media (width<500px) {
