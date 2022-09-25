@@ -41,12 +41,12 @@ const newNote = document.querySelector(".create-note");
 const container = document.querySelector(".container");
 newNote.addEventListener("click", (e) => {
   const createNewNote = `
-  <div class="sticky-box">
+  <div class="sticky-box glow">
 
   <ul class="sticky-box-nav">
       <button onclick = "bold()" class="sticky-box-nav-item bold">B</button>
       <button onclick = "underline()" class="sticky-box-nav-item underline">U</button>
-      <li class="sticky-box-nav-item delete "><img src="./images/delete.jfif" alt=""></li>
+      <li class="sticky-box-nav-item delete "><i class="fa-solid fa-trash"></i></li>
       <li class="sticky-box-nav-item copy "><img src="images/copy-img.png" alt=""></li>
       <input class="sticky-box-nav-item color" id="picker" type="color" name="color1"
           value="#ffffff" />

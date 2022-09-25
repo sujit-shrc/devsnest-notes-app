@@ -9,14 +9,14 @@
 ul {
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
   color: #fff;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgb(0, 0, 0);
   min-height: 100vh;
   height: auto;
 }
@@ -122,12 +122,56 @@ textarea {
 .sticky-box {
   height: auto;
   width: 260px;
+  position: relative;
   background-color: #24252a;
   padding: 8px;
   border-radius: 10px;
   color: white;
   transition: 0.5s ease-in;
-  margin-bottom: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.glow::before,
+.glow::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  /* background-color: red; */
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ffff00,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #ff00ff,
+    #ff0000,
+    #ffff00
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  border-radius: 10px;
+  animation: mooove 20s linear infinite;
+}
+
+@keyframes mooove {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.glow::after {
+  filter: blur(15px);
 }
 
 .sticky-box:hover {
@@ -244,6 +288,8 @@ button {
   display: none;
 }
 
+/* animations */
+
 /* mobile  styles */
 @media (width<600px) {
   .menu {
@@ -251,7 +297,6 @@ button {
   }
 
   .nav-items {
-   
     flex-direction: column;
     width: 250px;
     height: 100vh;
@@ -263,7 +308,7 @@ button {
     justify-content: center;
     align-items: center;
     transition: 0.3s ease-in;
-    box-shadow: 0 0 16px 0px #000;
+    z-index: 10000;
   }
 
   .nav-item {
@@ -305,6 +350,8 @@ button {
     box-shadow: 0 0 28px 5px rgb(96, 85, 85);
   }
   .show-menu {
+    box-shadow: 0 0 16px 0px #000;
+
     left: 0;
   }
 }
