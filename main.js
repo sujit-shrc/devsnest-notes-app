@@ -83,7 +83,9 @@ function underline() {
 document.addEventListener("click", function (e) {
   if (e.target.closest(".delete")) {
     const element = e.target.parentElement.parentElement.parentElement;
-    element.remove();
+    if (element.classList.contains("sticky-box")) {
+      element.remove();
+    }
   }
 });
 
