@@ -6,6 +6,24 @@ document.addEventListener("click", (e) => {
   }
 });
 
+document.addEventListener("click", (e) => {
+  let navEle = e.target.closest(".sticky-box-nav-item");
+  if (navEle) {
+    const copytext =
+      e.target.closest(".copy").parentElement.parentElement.lastElementChild
+        .innerText;
+
+    const textArea = document.createElement("textarea");
+    textArea.setAttribute("readonly", "");
+    textArea.style.position = "absolute";
+    textArea.value = copytext;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    textArea.classList.add("hidden");
+  }
+});
+
 // ==============================color changing functionality ==================================
 document.addEventListener("input", (e) => {
   const navEle = e.target.closest(".color");
@@ -13,7 +31,7 @@ document.addEventListener("input", (e) => {
     const colorValue = navEle.value;
     navEle.parentElement.parentElement.lastElementChild.firstElementChild.style.background =
       colorValue;
-      navEle.parentElement.nextElementSibling.firstElementChild.style.background =
+    navEle.parentElement.nextElementSibling.firstElementChild.style.background =
       colorValue;
   }
 });
@@ -53,12 +71,12 @@ newNote.addEventListener("click", (e) => {
 
 function bold() {
   {
-    document.execCommand("bold")
+    document.execCommand("bold");
   }
 }
 
 function underline() {
-  document.execCommand("underLine")
+  document.execCommand("underLine");
 }
 
 // =================================== delete note functionality =======================================
