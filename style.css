@@ -234,10 +234,11 @@ button {
 }
 
 .bold {
-  font-weight: bold;
+  padding: 0.5rem;
 }
 .underline {
-  text-decoration: underline;
+  padding: 0.5rem;
+  text-decoration: none;
 }
 .hidden {
   display: none;
