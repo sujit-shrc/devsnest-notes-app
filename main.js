@@ -1,17 +1,29 @@
-// ============================= copy text functionality ===================================
-// document.addEventListener("click", (e) => {
-//   let navEle = e.target.closest(".sticky-box-nav-item");
-//   if (navEle) {
-//     navEle.classList.toggle("click-show");
-//     if (navEle.classList.contains("copy")) {
-//       const textContent = navEle.parentElement.parentElement.lastElementChild.firstElementChild;
-//       console.log(textContent);
-//       console.log(textContent.textContent);
-//       // textContent.setSelectionRange(0, 99);
-//       // document.execCommand("copy");
-//     }
-//   }
-// });
+// ============================= style functionality ===================================
+document.addEventListener("click", (e) => {
+  let navEle = e.target.closest(".sticky-box-nav-item");
+  if (navEle) {
+    navEle.classList.toggle("click-show");
+  }
+});
+
+// ========================= copy text functionality =========================================
+document.addEventListener("click", (e) => {
+  let navEle = e.target.closest(".sticky-box-nav-item");
+  if (navEle) {
+    const copytext =
+      e.target.closest(".copy").parentElement.parentElement.lastElementChild
+        .innerText;
+
+    const textArea = document.createElement("textarea");
+    textArea.setAttribute("readonly", "");
+    textArea.style.position = "absolute";
+    textArea.value = copytext;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    textArea.classList.add("hidden");
+  }
+});
 
 // ==============================color changing functionality ==================================
 document.addEventListener("input", (e) => {
@@ -39,7 +51,7 @@ newNote.addEventListener("click", (e) => {
       <li class="sticky-box-nav-item delete "><img src="./images/delete.jfif" alt=""></li>
       <li class="sticky-box-nav-item copy "><img src="images/copy-img.png" alt=""></li>
       <input class="sticky-box-nav-item color" id="picker" type="color" name="color1"
-          value="#ffff00" />
+          value="#ffffff" />
          </ul>
 
   <div class="title">
@@ -47,8 +59,7 @@ newNote.addEventListener("click", (e) => {
   </div>
 
   <div class=" text-area">
-      <!-- <textarea name="text-area" id="text" cols="30" required rows="18"></textarea> -->
-      <div id="getText" contenteditable="true" class="editable">
+      <div id="getText" contenteditable="true" class="editable" placeholder="Write Something">
           
       </div>
   </div>
@@ -61,26 +72,12 @@ newNote.addEventListener("click", (e) => {
 
 function bold() {
   {
-    var selection = window.getSelection().getRangeAt(0);
-    if (window.getSelection().baseNode.parentNode.id != "getText") return;
-    var selectedText = selection.extractContents();
-    var span = document.createElement("span");
-    span.classList.toggle("bold");
-    span.appendChild(selectedText);
-    selection.insertNode(span);
+    document.execCommand("bold");
   }
 }
 
 function underline() {
-  {
-    var selection = window.getSelection().getRangeAt(0);
-    if (window.getSelection().baseNode.parentNode.id != "getText") return;
-    var selectedText = selection.extractContents();
-    var span = document.createElement("span");
-    span.classList.toggle("underline");
-    span.appendChild(selectedText);
-    selection.insertNode(span);
-  }
+  document.execCommand("underLine");
 }
 
 // =================================== delete note functionality =======================================
@@ -90,4 +87,18 @@ document.addEventListener("click", function (e) {
     const element = e.target.parentElement.parentElement.parentElement;
     element.remove();
   }
+});
+
+// ============================ search functionality =================================================
+const searchInput = document.querySelector(".search");
+
+searchInput.addEventListener("input", function (e) {
+  const titles = document.getElementsByClassName("title-input");
+  Array.from(titles).forEach((a) => {
+    if (a.value.toLowerCase().includes(searchInput.value.toLowerCase())) {
+      a.closest(".sticky-box").style.display = "block";
+    } else {
+      a.closest(".sticky-box").style.display = "none";
+    }
+  });
 });
