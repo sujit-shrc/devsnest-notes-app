@@ -1,17 +1,10 @@
 // ============================= copy text functionality ===================================
-// document.addEventListener("click", (e) => {
-//   let navEle = e.target.closest(".sticky-box-nav-item");
-//   if (navEle) {
-//     navEle.classList.toggle("click-show");
-//     if (navEle.classList.contains("copy")) {
-//       // let textContent = navEle.parentElement.parentElement.lastElementChild.firstElementChild;
-//       let textContent = document.getElementById("getText");
-//       textContent.select();
-//       textContent.setSelectionRange(0, 909);
-//       document.execCommand("copy");
-//     }
-//   }
-// });
+document.addEventListener("click", (e) => {
+  let navEle = e.target.closest(".sticky-box-nav-item");
+  if (navEle) {
+    navEle.classList.toggle("click-show");
+  }
+});
 
 // ==============================color changing functionality ==================================
 document.addEventListener("input", (e) => {
@@ -60,27 +53,12 @@ newNote.addEventListener("click", (e) => {
 
 function bold() {
   {
-    var selection = window.getSelection().getRangeAt(0);
-    if (window.getSelection().baseNode.parentNode.id != "getText") return;
-    var selectedText = selection.extractContents();
-    var span = document.createElement("span");
-    span.classList.toggle("bold");
-    span.appendChild(selectedText);
-    selection.insertNode(span);
-    
+    document.execCommand("bold")
   }
 }
 
 function underline() {
-  {
-    var selection = window.getSelection().getRangeAt(0);
-    if (window.getSelection().baseNode.parentNode.id != "getText") return;
-    var selectedText = selection.extractContents();
-    var span = document.createElement("span");
-    span.classList.toggle("underline");
-    span.appendChild(selectedText);
-    selection.insertNode(span);
-  }
+  document.execCommand("underLine")
 }
 
 // =================================== delete note functionality =======================================

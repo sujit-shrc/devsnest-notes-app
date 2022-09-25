@@ -260,6 +260,10 @@ button
     margin-bottom: 1rem;
   }
 
+  .documentation:hover
+  {
+    color: #c1abe0;
+  }
   .search {
     height: 40px;;
     width: 180px;
