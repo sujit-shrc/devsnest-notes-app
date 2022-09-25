@@ -1,4 +1,4 @@
-// ============================= copy text functionality ===================================
+// ============================= style functionality ===================================
 document.addEventListener("click", (e) => {
   let navEle = e.target.closest(".sticky-box-nav-item");
   if (navEle) {
@@ -6,6 +6,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// ========================= copy text functionality =========================================
 document.addEventListener("click", (e) => {
   let navEle = e.target.closest(".sticky-box-nav-item");
   if (navEle) {

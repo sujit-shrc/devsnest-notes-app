@@ -176,14 +176,15 @@ textarea {
   background-color: white;
   color: black;
   outline: none;
-  overflow: auto;
+  word-wrap: normal;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 button {
   background-color: black;
   color: white;
   cursor: pointer;
 }
-
 
 .bold {
   font-weight: bold;
@@ -255,7 +256,7 @@ button {
     justify-content: center;
     align-items: center;
     transition: 0.3s ease-in;
-    box-shadow: 0 0 16px 0px #000 ;
+    box-shadow: 0 0 16px 0px #000;
   }
 
   .nav-item {
@@ -292,8 +293,7 @@ button {
     padding: 10px;
   }
 
-  .documentation:hover
-  {
+  .documentation:hover {
     box-shadow: 0 0 28px 5px rgb(96, 85, 85);
   }
   .show-menu {
