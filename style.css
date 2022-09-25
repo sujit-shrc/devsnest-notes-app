@@ -247,7 +247,7 @@ button {
     flex-direction: column;
     width: 250px;
     height: 100vh;
-    background-color: rgb(54, 51, 51);
+    background-color: #2a2b2f;
     position: absolute;
     top: 0;
     left: -250px;
@@ -255,6 +255,7 @@ button {
     justify-content: center;
     align-items: center;
     transition: 0.3s ease-in;
+    box-shadow: 0 0 16px 0px #000 ;
   }
 
   .nav-item {
@@ -289,9 +290,12 @@ button {
     border-radius: 20px;
     padding: 0.4rem;
     padding: 10px;
-    box-shadow: 0 0 28px 5px rgb(96, 85, 85);
   }
 
+  .documentation:hover
+  {
+    box-shadow: 0 0 28px 5px rgb(96, 85, 85);
+  }
   .show-menu {
     left: 0;
   }
