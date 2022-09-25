@@ -87,6 +87,7 @@ function underline() {
 
 document.addEventListener("click", function (e) {
   if (e.target.closest(".delete")) {
-    e.target.parentElement.parentElement.parentElement.style.display = "none";
+    const element = e.target.parentElement.parentElement.parentElement;
+    element.remove();
   }
 });
