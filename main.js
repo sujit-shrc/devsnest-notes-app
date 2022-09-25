@@ -36,10 +36,11 @@ newNote.addEventListener("click", (e) => {
   <ul class="sticky-box-nav">
       <button onclick = "bold()" class="sticky-box-nav-item bold">B</button>
       <button onclick = "underline()" class="sticky-box-nav-item underline">U</button>
+      <li  onclick = "deleteNote(e)" class="sticky-box-nav-item delete "><img src="./images/delete.jfif" alt=""></li>
       <li class="sticky-box-nav-item copy "><img src="images/copy-img.png" alt=""></li>
       <input class="sticky-box-nav-item color" id="picker" type="color" name="color1"
           value="#ffff00" />
-  </ul>
+         </ul>
 
   <div class="title">
       <input id="title" class="title-input" placeholder="Title" required type="text" id="title">
@@ -80,4 +81,10 @@ function underline() {
     span.appendChild(selectedText);
     selection.insertNode(span);
   }
+}
+
+
+function deleteNote(e)
+{
+  console.log(e.target);
 }

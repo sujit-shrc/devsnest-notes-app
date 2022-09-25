@@ -177,6 +177,7 @@ textarea {
   background-color: white;
   color: black;
   outline: none;
+  overflow: auto;
 }
 button
 {
@@ -213,16 +214,16 @@ button
   padding-left: 0.4rem;
 }
 
-textarea::-webkit-scrollbar {
+.editable::-webkit-scrollbar {
   width: 6px;
 }
 
-textarea::-webkit-scrollbar-track {
+.editable::-webkit-scrollbar-track {
   border-radius: 8px;
   background-color: rgb(32, 26, 26);
 }
 
-textarea::-webkit-scrollbar-thumb {
+.editable::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: grey;
 }
