@@ -87,3 +87,17 @@ document.addEventListener("click", function (e) {
     element.remove();
   }
 });
+
+// ============================ search functionality =================================================
+const searchInput = document.querySelector(".search");
+
+searchInput.addEventListener("input", function (e) {
+  const titles = document.getElementsByClassName("title-input");
+  Array.from(titles).forEach((a) => {
+    if (a.value.toLowerCase().includes(searchInput.value.toLowerCase())) {
+      a.closest(".sticky-box").style.display = "grid";
+    } else {
+      a.closest(".sticky-box").style.display = "none";
+    }
+  });
+});
