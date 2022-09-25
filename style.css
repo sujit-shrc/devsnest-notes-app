@@ -81,9 +81,9 @@ textarea {
   border-radius: 50%;
 }
 .search {
-  background-color: #e3daf0;
+  background-color: white;
   border: none;
-  border-radius: 3px;
+  border-radius: 40px;
   outline: transparent;
   padding: 0.3rem;
 }
@@ -181,7 +181,9 @@ textarea {
 button {
   background-color: black;
   color: white;
+  cursor: pointer;
 }
+
 
 .bold {
   font-weight: bold;
@@ -236,7 +238,7 @@ button {
 }
 
 /* mobile  styles */
-@media (width<500px) {
+@media (width<600px) {
   .menu {
     display: block;
   }
@@ -270,10 +272,14 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 18px;
+    padding-left: 10px;
   }
   .search::placeholder {
+    align-items: center;
     text-align: center;
     margin-left: 18px;
+    color: rgb(92, 88, 88);
   }
 
   .documentation {
