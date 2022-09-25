@@ -8,12 +8,10 @@ document.addEventListener("click", (e) => {
 
 // ========================= copy text functionality =========================================
 document.addEventListener("click", (e) => {
-  // let navEle = e.target.closest(".sticky-box-nav-item");
   if (e.target.closest(".copy")) {
     const copytext =
-      e.target.parentElement.parentElement.parentElement.parentElement
-        .lastElementChild.lastElementChild.innerText;
-    console.log(copytext);
+      e.target.closest(".copy").parentElement.parentElement.lastElementChild
+        .innerText;
     const textArea = document.createElement("textarea");
     textArea.setAttribute("readonly", "");
     textArea.style.position = "absolute";
@@ -85,7 +83,6 @@ function underline() {
 document.addEventListener("click", function (e) {
   if (e.target.closest(".delete")) {
     const element = e.target.parentElement.parentElement.parentElement;
-    console.log(element);
     element.remove();
   }
 });
