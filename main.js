@@ -4,11 +4,11 @@
 //   if (navEle) {
 //     navEle.classList.toggle("click-show");
 //     if (navEle.classList.contains("copy")) {
-//       const textContent = navEle.parentElement.parentElement.lastElementChild.firstElementChild;
-//       console.log(textContent);
-//       console.log(textContent.textContent);
-//       // textContent.setSelectionRange(0, 99);
-//       // document.execCommand("copy");
+//       // let textContent = navEle.parentElement.parentElement.lastElementChild.firstElementChild;
+//       let textContent = document.getElementById("getText");
+//       textContent.select();
+//       textContent.setSelectionRange(0, 909);
+//       document.execCommand("copy");
 //     }
 //   }
 // });
@@ -20,7 +20,7 @@ document.addEventListener("input", (e) => {
     const colorValue = navEle.value;
     navEle.parentElement.parentElement.lastElementChild.firstElementChild.style.background =
       colorValue;
-    navEle.parentElement.nextElementSibling.firstElementChild.style.background =
+      navEle.parentElement.nextElementSibling.firstElementChild.style.background =
       colorValue;
   }
 });
@@ -39,7 +39,7 @@ newNote.addEventListener("click", (e) => {
       <li class="sticky-box-nav-item delete "><img src="./images/delete.jfif" alt=""></li>
       <li class="sticky-box-nav-item copy "><img src="images/copy-img.png" alt=""></li>
       <input class="sticky-box-nav-item color" id="picker" type="color" name="color1"
-          value="#ffff00" />
+          value="#ffffff" />
          </ul>
 
   <div class="title">
@@ -47,8 +47,7 @@ newNote.addEventListener("click", (e) => {
   </div>
 
   <div class=" text-area">
-      <!-- <textarea name="text-area" id="text" cols="30" required rows="18"></textarea> -->
-      <div id="getText" contenteditable="true" class="editable">
+      <div id="getText" contenteditable="true" class="editable" placeholder="Write Something">
           
       </div>
   </div>
@@ -68,6 +67,7 @@ function bold() {
     span.classList.toggle("bold");
     span.appendChild(selectedText);
     selection.insertNode(span);
+    
   }
 }
 

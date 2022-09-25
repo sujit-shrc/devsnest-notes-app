@@ -59,11 +59,11 @@ textarea {
   height: 40px;
   border: 1px solid white;
   border-radius: 50px;
-  transition: 0.2s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 .create-note:hover {
   cursor: pointer;
-  box-shadow: 0 0 10px 5px rgb(56, 56, 56);
+  box-shadow: 0 0 20px 5px rgb(101, 97, 97);
 }
 
 #picker {
@@ -199,6 +199,7 @@ button
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .title-input {
@@ -206,8 +207,10 @@ button
   border: none;
   padding: 0.3rem;
   width: 100%;
-  font-size: 1.1rem;
   font-weight: 300;
+  font-size: 1.3rem;
+  font-family: "Roboto",Arial, Helvetica, sans-serif;
+  color : rgb(18, 18, 18);
 }
 
 .title-input::placeholder {
@@ -258,11 +261,29 @@ button
   }
 
   .search {
-    width: 200px;
+    height: 40px;;
+    width: 180px;
+    border-radius: 145px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  .search::placeholder
+  {
+    text-align: center;
+    margin-left: 18px;
+  }
+
+    .documentation
+    {
+      border: white 1px solid;
+      background-color: rgb(107, 105, 100);
+      font-size: 20px;
+      border-radius: 20px;
+      padding: 0.4rem;
+      padding: 10px;
+      box-shadow: 0 0 28px 5px rgb(96, 85, 85);
+    }
 
   .show-menu {
     left: 0;
