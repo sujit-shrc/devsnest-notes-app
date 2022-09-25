@@ -81,9 +81,9 @@ textarea {
   border-radius: 50%;
 }
 .search {
-  background-color: #e3daf0;
+  background-color: white;
   border: none;
-  border-radius: 3px;
+  border-radius: 40px;
   outline: transparent;
   padding: 0.3rem;
 }
@@ -181,7 +181,9 @@ textarea {
 button {
   background-color: black;
   color: white;
+  cursor: pointer;
 }
+
 
 .bold {
   font-weight: bold;
@@ -236,7 +238,7 @@ button {
 }
 
 /* mobile  styles */
-@media (width<500px) {
+@media (width<600px) {
   .menu {
     display: block;
   }
@@ -245,7 +247,7 @@ button {
     flex-direction: column;
     width: 250px;
     height: 100vh;
-    background-color: rgb(54, 51, 51);
+    background-color: #2a2b2f;
     position: absolute;
     top: 0;
     left: -250px;
@@ -253,6 +255,7 @@ button {
     justify-content: center;
     align-items: center;
     transition: 0.3s ease-in;
+    box-shadow: 0 0 16px 0px #000 ;
   }
 
   .nav-item {
@@ -270,10 +273,14 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 18px;
+    padding-left: 10px;
   }
   .search::placeholder {
+    align-items: center;
     text-align: center;
     margin-left: 18px;
+    color: rgb(92, 88, 88);
   }
 
   .documentation {
@@ -283,9 +290,12 @@ button {
     border-radius: 20px;
     padding: 0.4rem;
     padding: 10px;
-    box-shadow: 0 0 28px 5px rgb(96, 85, 85);
   }
 
+  .documentation:hover
+  {
+    box-shadow: 0 0 28px 5px rgb(96, 85, 85);
+  }
   .show-menu {
     left: 0;
   }
