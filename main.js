@@ -1,5 +1,4 @@
-// const stickyNav = document.querySelector(".sticky-box-nav");
-
+// ============================= copy text functionality ===================================
 document.addEventListener("click", (e) => {
   let navEle = e.target.closest(".sticky-box-nav-item");
   if (navEle) {
@@ -15,19 +14,20 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// ==============================color changing functionality ==================================
 document.addEventListener("input", (e) => {
   const navEle = e.target.closest(".color");
   if (navEle) {
-    if (navEle.classList.contains("color")) {
-      const colorValue = navEle.value;
-      console.log(colorValue);
-      document.getElementById("text").style.background = colorValue;
-      document.getElementById("title").style.background = colorValue;
-    }
+    console.log(navEle);
+    const colorValue = navEle.firstElementChild.value;
+    navEle.parentElement.parentElement.lastElementChild.firstElementChild.style.background =
+      colorValue;
+    navEle.parentElement.nextElementSibling.firstElementChild.style.background =
+      colorValue;
   }
 });
 
-// =========== create new note ===================
+// =========== create new note functionality===================
 
 const newNote = document.querySelector(".create-note");
 const container = document.querySelector(".container");
@@ -46,7 +46,7 @@ newNote.addEventListener("click", (e) => {
                 <input class="title-input" placeholder="Title" required type="text" id="title">
             </div>
             <div class=" text-area">
-                <textarea name="text-area" id="" cols="30" required rows="18"></textarea>
+                <textarea name="text-area" id="" cols="30" required rows="15"></textarea>
             </div>
         </div>
     `;

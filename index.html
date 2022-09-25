@@ -5,36 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes App</title>
+
+    <!-- linking fontawesome files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- linking main style sheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- linking main script file -->
     <script src="main.js" defer></script>
+
+    <!-- linking navbar script files -->
+    <script src="navbar.js" defer></script>
+
+
+    <title>Notes App</title>
 </head>
 
 <body>
+    <!-- header of section  -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-create">
+                <p class="logo">Notes App</p>
+                <div class="create-note">
+                    <h2>+</h2>
+                </div>
+            </div>
+            <ul class="nav-items">
+                <li class="nav-item">How it works</li>
+                <input class="search nav-item" type="text" placeholder="Search Your Notes">
+            </ul>
+            <img class="menu"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAAKElEQVQ4jWNgGPKA8XdwcPf///8tyNLMyHiCidouoj8YDYPRMKAKAACHnBKOvbBOrAAAAABJRU5ErkJggg==">
+        </nav>
+    </header>
+
+    <!-- main section  -->
     <main>
-        <header>
-            <nav class="navbar">
-                <div class="logo-create">
-                    <p>Notes App</p>
-                    <div class="create-note">
-                        <h2>+</h2>
-                    </div>
-                </div><img class="menu"
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAAKElEQVQ4jWNgGPKA8XdwcPf///8tyNLMyHiCidouoj8YDYPRMKAKAACHnBKOvbBOrAAAAABJRU5ErkJggg==">
-
-                <ul class="nav-items">
-                    <li class="nav-item">How it works</li>
-                    <!-- <li class="nav-item"></li>
-                    <li class="nav-item"></li>     -->
-                    <input class="search" type="text" placeholder="Search Your Notes">
-                </ul>
-            </nav>
-        </header>
-
         <section>
             <div class="container">
 
-                <div class="sticky-box">
+                <!-- <div class="sticky-box">
 
                     <ul class="sticky-box-nav">
                         <li class="sticky-box-nav-item bold">B</li>
@@ -51,10 +65,7 @@
                     <div class=" text-area">
                         <textarea name="text-area" id="text" cols="30" required rows="18"></textarea>
                     </div>
-                </div>
-
-
-
+                </div> -->
 
 
             </div>
