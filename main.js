@@ -9,13 +9,13 @@ document.addEventListener("click", (e) => {
 // ========================= copy text functionality =========================================
 document.addEventListener("click", (e) => {
   if (e.target.closest(".copy")) {
-    const copytext =
-      e.target.closest(".copy").parentElement.parentElement.lastElementChild
-        .innerText;
+    const copytext = e.target
+      .closest(".copy")
+      .parentElement.parentElement.querySelector(".text-area");
     const textArea = document.createElement("textarea");
     textArea.setAttribute("readonly", "");
     textArea.style.position = "absolute";
-    textArea.value = copytext;
+    textArea.value = copytext.innerText;
     document.body.appendChild(textArea);
     textArea.select();
     document.execCommand("copy");
@@ -28,10 +28,12 @@ document.addEventListener("input", (e) => {
   const navEle = e.target.closest(".color");
   if (navEle) {
     const colorValue = navEle.value;
-    navEle.parentElement.parentElement.lastElementChild.firstElementChild.style.background =
-      colorValue;
-    navEle.parentElement.nextElementSibling.firstElementChild.style.background =
-      colorValue;
+    navEle.parentElement.parentElement.querySelector(
+      ".title-input"
+    ).style.background = colorValue;
+    navEle.parentElement.parentElement.querySelector(
+      ".editable"
+    ).style.background = colorValue;
   }
 });
 
@@ -44,25 +46,28 @@ newNote.addEventListener("click", (e) => {
   <div class="sticky-box glow">
 
   <ul class="sticky-box-nav">
-      <button onclick = "bold()" class="sticky-box-nav-item bold">B</button>
-      <button onclick = "underline()" class="sticky-box-nav-item underline">U</button>
-      <li class="sticky-box-nav-item delete "><i class="fa-solid fa-trash"></i></li>
-      <li class="sticky-box-nav-item copy "><img src="images/copy-img.png" alt=""></li>
-      <input class="sticky-box-nav-item color" id="picker" type="color" name="color1"
-          value="#ffffff" />
-         </ul>
+    <button onclick = "bold()" class="sticky-box-nav-item bold">B</button>
+    <button onclick = "underline()" class="sticky-box-nav-item underline">U</button>
+    <li class="sticky-box-nav-item delete "><i class="fa-solid fa-trash"></i></li>
+    <li class="sticky-box-nav-item copy "><img src="images/copy-img.png" alt=""></li>
+    <input class="sticky-box-nav-item color" id="picker" type="color" name="color1"
+value="#ffffff" />
+  </ul>
 
   <div class="title">
       <input id="title" class="title-input" placeholder="Title" required type="text" id="title">
   </div>
 
   <div class=" text-area">
-      <div id="getText" contenteditable="true" class="editable" placeholder="Write Something">
-          
-      </div>
+      <div id="getText" contenteditable="true" class="editable" placeholder="Write Something"></div>
   </div>
-</div>
-    `;
+  <div class="date-wrapper">
+      <p class="date">${createNewDate()}</p>
+  </div>
+  
+  </div>
+  
+  `;
   container.insertAdjacentHTML("beforeend", createNewNote);
 });
 
@@ -100,3 +105,27 @@ searchInput.addEventListener("input", function (e) {
     }
   });
 });
+
+// ===========================add date when new note is created ===========================
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "June",
+  "July",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+function createNewDate() {
+  let currentDate = new Date(),
+    month = months[currentDate.getMonth()],
+    day = currentDate.getDate(),
+    year = currentDate.getFullYear();
+  return `${month} ${day}, ${year}`;
+}

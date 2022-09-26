@@ -153,7 +153,7 @@ textarea {
   height: calc(100% + 4px);
   z-index: -1;
   border-radius: 10px;
-  animation: mooove 20s linear infinite;
+  /* animation: mooove 20s linear infinite; */
 }
 
 @keyframes mooove {
@@ -288,7 +288,13 @@ button {
   display: none;
 }
 
-/* animations */
+/* date styles */
+.date-wrapper {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
 
 /* mobile  styles */
 @media (width<600px) {
