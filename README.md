@@ -36,6 +36,6 @@ Open index.html file in Browser
 
 How It Works?
 
-[Read Documentation](https://anchalsinghrajput.github.io/note-app/docs/docs.htm)
+[Read Documentation](https://anchalsinghrajput.github.io/note-app/docs/docs.html)
 
 Copyright © 2022 All Rights Reserved
