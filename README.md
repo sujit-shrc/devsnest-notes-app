@@ -4,7 +4,7 @@ A Web-Based Notes App
 
   
 
-### The simplest way to keep notes Light, clean, and free. Our note taking app helps you capture and prioritize ideas.
+### The simplest way to keep notes Light, clean, and free. Our note taking app will help you to capture and prioritize your ideas.
 
 Features:
 ---------
@@ -16,7 +16,7 @@ Features:
     *   Copy Text
 *   Delete Useless Notes
 *   Easily Customizable Editor UI - Backgroud-color.
-*   Search Notes - easily search all notes
+*   Search Notes - easily search all notes using your topic
 
 Usage:
 ------
