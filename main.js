@@ -123,9 +123,9 @@ const months = [
 ];
 
 function createNewDate() {
-  let currentDate = new Date(),
-    month = months[currentDate.getMonth()],
-    day = currentDate.getDate(),
-    year = currentDate.getFullYear();
+  let currentDate = new Date();
+  const month = months[currentDate.getMonth()];
+  const day = currentDate.getDate();
+  const year = currentDate.getFullYear();
   return `${month} ${day}, ${year}`;
 }
